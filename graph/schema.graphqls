@@ -1,0 +1,18 @@
+type Preference {
+  id: ID!
+  description: String!
+  videoUrl: String
+}
+
+
+type Query{
+  preferences: [Preference!]!
+}
+
+input NewPreference {
+  description: String!
+}
+
+type Mutation {
+  createPreference(input: NewPreference!): String!
+}
